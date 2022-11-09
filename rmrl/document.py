@@ -155,14 +155,20 @@ class DocumentPageLayer:
     def __init__(self, page, name=None):
         self.page = page
         self.name = name
-
+        
         self.colors = [
             #QSettings().value('pane/notebooks/export_pdf_blackink'),
             #QSettings().value('pane/notebooks/export_pdf_grayink'),
             #QSettings().value('pane/notebooks/export_pdf_whiteink')
-            (0, 0, 0),
-            (0.5, 0.5, 0.5),
-            (1, 1, 1)
+            (0, 0, 0),  # black
+            (0.5, 0.5, 0.5),  # grey 
+            (1, 1, 1),  # white
+            (1, 1, 0.1), # yellow 
+            (0.3, 1, 0.3), # green
+            (1, 0.28, 0.76), # pink
+            (0, 0, 1), # blue
+            (1, 0, 0), # red
+            (0.4, 0.4, 0.4)  # grey         
         ]
 
         # Set this from the calling func
